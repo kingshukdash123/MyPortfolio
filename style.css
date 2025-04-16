@@ -72,16 +72,15 @@ section {
 }
 .navbar a span {
     color: rgb(191, 190, 190);
-}
-.navbar a, .navbar a span{
     font-family: monospace;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
 }
 .navbar a {
+    font-family: monospace;
     margin-left: 1.4rem;
     color: var(--comment-color);
     font-weight: 900;
-    font-size: 1rem;
+    font-size: 0.9rem;
     position: relative;
     z-index: 0;
 }
@@ -106,7 +105,6 @@ section {
     padding: 12% 0% 0% 10%;
 }
 .timeline {
-    padding: 1rem 0 0 0;
     height: 100%;
     border-left: 2px solid var(--timeline-color);
     position: relative;
@@ -122,38 +120,37 @@ section {
     top: -15px;
 }
 .timeline-pointer {
-    padding: 0rem 0 0 1rem;
+    padding: 1rem 0 0 1rem;
     font-family: monospace;
     color: var(--error-color);
     font-size: 0.9rem;
-    margin-bottom: 1rem;
 }
 .timeline-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
-    padding: 0rem 5rem;
+    gap: 7rem;
+    padding: 2.5rem 5rem 0 5rem;
 }
 .home-comment {
     font-family: monospace;
     font-size: 0.9rem;
-    margin-bottom: 1.5rem;
     color: var(--comment-color);
 }
 .timeline-content-text h1 {
     font-size: 2.5rem;
     color: var(--second-text-color);
+    margin-top: 1.5rem;
 }
 .timeline-content-text h1 span {
     color: var(--main-color);
 }
 .timeline-content-text h3 {
     font-size: 1.5rem;
-    margin: 0.3rem 0 0.8rem 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 100;
     color: var(--second-text-color);
+    margin-top: 1rem;
 }
 .timeline-content-text h3 span {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -164,10 +161,11 @@ section {
 }
 .timeline-content-text p {
     font-family: monospace;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     letter-spacing: 1px;
     line-height: 1.3rem;
     color: var(--second-text-color);
+    margin-top: 1.3rem;
 }
 .timeline-content-img img {
     height: 20rem;
@@ -178,12 +176,12 @@ section {
     transition: 0.2s ease;
 }
 .timeline-content-img img:hover {
-    box-shadow: 0 0 100px 10px #25303b;
+    box-shadow: 0 0 100px 15px #25303b;
 }
 .social-media {
     display: flex;
     gap: 1.5rem;
-    margin-top: 0.8rem;
+    margin-top: 1rem;
 }
 .social-media a {
     height: 3rem;
@@ -221,11 +219,9 @@ section {
     transition: box-shadow 0.5s ease-out;
     z-index: -1;
 }
-  
 .social-media a:hover i {
     color: black;
 }
-  
 .social-media a:hover::before {
     box-shadow: inset 0 0 0 10em var(--main-color);
 }
@@ -257,16 +253,14 @@ section {
     display: block;
     z-index: -1;
 }
-   
 .resume:hover::before {
     width: 105%;
-}
-   
+} 
 .resume:hover {
     color: #111;
     border: 2px solid rgb(36, 41, 46);
 }
-   
+
 .lorem {
     opacity: 0%;
     margin-top: 10rem;
