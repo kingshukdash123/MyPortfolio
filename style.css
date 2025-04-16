@@ -47,28 +47,55 @@ section {
     backdrop-filter: blur(20px);
     z-index: 1000;
 }
-.logo-box {
+.logo-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 0.7rem 0.75rem;
     border-left: 0.5rem solid var(--text-color);
+}
+.logo-box {
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0rem 0.5rem 0;
     transition: 0.3s ease-in-out;
     cursor: pointer;
+    border-right: 2px solid var(--text-color);
+    animation: typing 12s steps(10) infinite;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
 }
-.logo {
+@keyframes typing {
+    0%, 5% {
+        width: 0;
+    }
+    15% {
+        width: 33%;
+    }
+    25% {
+        width: 66%;
+    }
+    35%, 70% {
+        width: 100%;
+    }
+    80% {
+        width: 66%;
+    }
+    90% {
+        width: 33%;
+    }
+    97%, 100% {
+        width: 0;
+    }
+}
+.logo pre{
     font-family: "Josefin Sans", sans-serif;
     letter-spacing: 1px;
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--main-color);
+    color: var(--text-color);
     transition: 0.05s ease-in-out;
-}
-.logo-box:hover {
-    transform: scale(1.03);
-}
-.logo-box:hover .logo {
-    transform: scale(1.03);
 }
 .navbar a span {
     color: rgb(191, 190, 190);
@@ -102,7 +129,7 @@ section {
     color: var(--main-color);
 }
 .home {
-    padding: 12% 0% 0% 10%;
+    padding: 10% 0% 0% 10%;
 }
 .timeline {
     height: 100%;
@@ -120,10 +147,25 @@ section {
     top: -15px;
 }
 .timeline-pointer {
-    padding: 1rem 0 0 1rem;
+    margin: 2rem 0 0 2rem;
+    display: inline-block;
+    padding: 0.5rem;
     font-family: monospace;
     color: var(--error-color);
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: 600;
+    position: relative;
+    border: 2px solid var(--timeline-color);
+    
+}
+.timeline-pointer::before {
+    content: '';
+    height: 2px;
+    width: 2rem;
+    position: absolute;
+    background-color: var(--timeline-color);
+    top: 50%;
+    left: -2.1rem;
 }
 .timeline-content {
     display: flex;
@@ -159,8 +201,7 @@ section {
     letter-spacing: -2px;
 }
 .career-option {
-    border-bottom: 3px solid #4e3a96;
-    /* border-top: 1px solid black; */
+    border-bottom: 3px solid var(--timeline-color);
     height: 2.5rem;
     overflow: hidden;
     margin-left: 0.9rem;
